@@ -5,7 +5,9 @@ def line(katz_deli)
 if katz_deli.empty?
   puts "The line is currently empty."
 else
-  puts "The line is currently: " + katz_deli.join
+  messege = "The line is currently: "
+katz_deli.each_with_index do |name, index|  
+  messege += "#{index.to_i + 1}. #{name}"
 end
 end
 
@@ -17,7 +19,7 @@ end
 def now_serving(katz_deli)
 if katz_deli.empty?
   puts "There is nobody waiting to be served!"
-else
+else 
   puts "Currently serving #{katz_deli.shift}."
 end
 end
